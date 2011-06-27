@@ -26,7 +26,7 @@
 
 - (id)initWithFrame:(CGRect)aFrame achievementDescription:(GKAchievementDescription *)anAchievement
 {
-	if (self = [self initWithFrame:aFrame])
+	if ((self = [self initWithFrame:aFrame]))
 	{
 		// setter defined below to populate subviews with info
 		self.achievementDescription = anAchievement;
@@ -36,7 +36,7 @@
 
 - (id)initWithFrame:(CGRect)aFrame title:(NSString *)aTitle message:(NSString *)aMessage
 {
-    if (self = [self initWithFrame:aFrame])
+    if ((self = [self initWithFrame:aFrame]))
     {
 		self.textLabel.text = aTitle;
 		self.detailLabel.text = aMessage;

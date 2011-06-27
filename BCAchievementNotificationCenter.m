@@ -13,7 +13,7 @@
 #define kBCAchievementDefaultSize   CGSizeMake(284.0f, 52.0f)
 #define kBCAchievementViewPadding 10.0f
 #define kBCAchievementAnimeTime     0.4f
-#define kBCAchievementDisplayTime   1.75f
+#define kBCAchievementDisplayTime   2.30f
 
 static BCAchievementNotificationCenter *defaultHandler = nil;
 
@@ -199,12 +199,12 @@ static BCAchievementNotificationCenter *defaultHandler = nil;
 {
 	//[self showTitle];
 	
-	UIDeviceOrientation o = [[UIApplication sharedApplication] statusBarOrientation];
+	UIInterfaceOrientation o = [[UIApplication sharedApplication] statusBarOrientation];
 	CGFloat angle = 0;
 	switch (o) {
-		case UIDeviceOrientationLandscapeLeft: angle = 90; break;
-		case UIDeviceOrientationLandscapeRight: angle = -90; break;
-		case UIDeviceOrientationPortraitUpsideDown: angle = 180; break;
+		case UIInterfaceOrientationLandscapeLeft: angle = 90; break;
+		case UIInterfaceOrientationLandscapeRight: angle = -90; break;
+		case UIInterfaceOrientationPortraitUpsideDown: angle = 180; break;
 		default: break;
 	}
 	
@@ -242,12 +242,12 @@ static BCAchievementNotificationCenter *defaultHandler = nil;
 
 - (void)setupDefaultFrame
 {
-	UIDeviceOrientation o = [[UIApplication sharedApplication] statusBarOrientation];
+	UIInterfaceOrientation o = [[UIApplication sharedApplication] statusBarOrientation];
 	CGFloat angle = 0;
 	switch (o) {
-		case UIDeviceOrientationLandscapeLeft: angle = 90; break;
-		case UIDeviceOrientationLandscapeRight: angle = -90; break;
-		case UIDeviceOrientationPortraitUpsideDown: angle = 180; break;
+		case UIInterfaceOrientationLandscapeLeft: angle = 90; break;
+		case UIInterfaceOrientationLandscapeRight: angle = -90; break;
+		case UIInterfaceOrientationPortraitUpsideDown: angle = 180; break;
 		default: break;
 	}
 	
@@ -348,12 +348,12 @@ static BCAchievementNotificationCenter *defaultHandler = nil;
 
 + (CGRect)containerRect
 {
-	UIDeviceOrientation o = [[UIApplication sharedApplication] statusBarOrientation];
+	UIInterfaceOrientation o = [[UIApplication sharedApplication] statusBarOrientation];
 	
 	CGRect f = [[UIScreen mainScreen] applicationFrame];
 	
 	// Swap the frame height and width if necessary
- 	if (UIDeviceOrientationIsLandscape(o)) {
+ 	if (UIInterfaceOrientationIsLandscape(o)) {
 		CGFloat t;
 		t = f.size.width;
 		f.size.width = f.size.height;
