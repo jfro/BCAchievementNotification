@@ -3,7 +3,7 @@
 //  Aki
 //
 //  Created by Jeremy Knope on 10/26/10.
-//  Copyright 2010 Ambrosia Software, Inc. All rights reserved.
+//  Copyright 2010 Buttered Cat Software. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

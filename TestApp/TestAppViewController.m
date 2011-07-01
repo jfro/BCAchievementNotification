@@ -3,7 +3,7 @@
 //  BCAchievementNotifier
 //
 //  Created by Jeremy Knope on 7/1/11.
-//  Copyright 2011 Butterd Cat Software. All rights reserved.
+//  Copyright 2011 Buttered Cat Software. All rights reserved.
 //
 
 #import "TestAppViewController.h"
