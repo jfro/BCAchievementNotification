@@ -41,8 +41,7 @@
 		//[_topView addSubview:_containerView];
 		_containerWindow = [[UIWindow alloc] initWithFrame:[self startFrameForFrame:notification.frame]];
 		_containerWindow.windowLevel = UIWindowLevelStatusBar;
-		_containerWindow.layer.borderColor = [UIColor redColor].CGColor;
-		_containerWindow.layer.borderWidth = 1.0f;
+		_containerWindow.userInteractionEnabled = NO;
 		[self setupDefaultFrame];
 	}
 	//[_topView addSubview:notification];
