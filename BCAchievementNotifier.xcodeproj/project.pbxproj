@@ -1,0 +1,498 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		02BA610E13BE5AE900FB352E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02BA610D13BE5AE900FB352E /* UIKit.framework */; };
+		02BA611013BE5AE900FB352E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02BA610F13BE5AE900FB352E /* Foundation.framework */; };
+		02BA611213BE5AE900FB352E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02BA611113BE5AE900FB352E /* CoreGraphics.framework */; };
+		02BA611813BE5AE900FB352E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 02BA611613BE5AE900FB352E /* InfoPlist.strings */; };
+		02BA611A13BE5AE900FB352E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 02BA611913BE5AE900FB352E /* main.m */; };
+		02BA611E13BE5AE900FB352E /* BCAchievementNotifierAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 02BA611D13BE5AE900FB352E /* BCAchievementNotifierAppDelegate.m */; };
+		02BA613013BE5AEA00FB352E /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02BA612F13BE5AEA00FB352E /* SenTestingKit.framework */; };
+		02BA613113BE5AEA00FB352E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02BA610D13BE5AE900FB352E /* UIKit.framework */; };
+		02BA613213BE5AEA00FB352E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02BA610F13BE5AE900FB352E /* Foundation.framework */; };
+		02BA613313BE5AEA00FB352E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02BA611113BE5AE900FB352E /* CoreGraphics.framework */; };
+		02BA613B13BE5AEA00FB352E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 02BA613913BE5AEA00FB352E /* InfoPlist.strings */; };
+		02BA613D13BE5AEA00FB352E /* BCAchievementNotifierTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 02BA613C13BE5AEA00FB352E /* BCAchievementNotifierTests.h */; };
+		02BA613F13BE5AEA00FB352E /* BCAchievementNotifierTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 02BA613E13BE5AEA00FB352E /* BCAchievementNotifierTests.m */; };
+		02BA615813BE5B3700FB352E /* BCAchievementNotificationCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 02BA614F13BE5B3700FB352E /* BCAchievementNotificationCenter.m */; };
+		02BA615913BE5B3700FB352E /* BCAchievementNotificationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 02BA615113BE5B3700FB352E /* BCAchievementNotificationView.m */; };
+		02BA615A13BE5B3700FB352E /* gk-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 02BA615413BE5B3700FB352E /* gk-icon.png */; };
+		02BA615B13BE5B3700FB352E /* gk-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 02BA615513BE5B3700FB352E /* gk-icon@2x.png */; };
+		02BA615C13BE5B3700FB352E /* gk-notification.png in Resources */ = {isa = PBXBuildFile; fileRef = 02BA615613BE5B3700FB352E /* gk-notification.png */; };
+		02BA615D13BE5B3700FB352E /* gk-notification@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 02BA615713BE5B3700FB352E /* gk-notification@2x.png */; };
+		02BA615F13BE5DBE00FB352E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02BA615E13BE5DBE00FB352E /* QuartzCore.framework */; };
+		02BA616813BE601900FB352E /* TestAppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02BA616613BE601900FB352E /* TestAppViewController.m */; };
+		02BA616913BE601900FB352E /* TestAppViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02BA616713BE601900FB352E /* TestAppViewController_iPad.xib */; };
+		02BA617013BE618000FB352E /* TestAppViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02BA616F13BE618000FB352E /* TestAppViewController_iPhone.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		02BA613413BE5AEA00FB352E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 02BA610013BE5AE900FB352E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 02BA610813BE5AE900FB352E;
+			remoteInfo = BCAchievementNotifier;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		02BA610913BE5AE900FB352E /* BCAchievementNotifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BCAchievementNotifier.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		02BA610D13BE5AE900FB352E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		02BA610F13BE5AE900FB352E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		02BA611113BE5AE900FB352E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		02BA611513BE5AE900FB352E /* BCAchievementNotifier-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BCAchievementNotifier-Info.plist"; sourceTree = "<group>"; };
+		02BA611713BE5AE900FB352E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		02BA611913BE5AE900FB352E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		02BA611B13BE5AE900FB352E /* BCAchievementNotifier-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BCAchievementNotifier-Prefix.pch"; sourceTree = "<group>"; };
+		02BA611C13BE5AE900FB352E /* BCAchievementNotifierAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BCAchievementNotifierAppDelegate.h; sourceTree = "<group>"; };
+		02BA611D13BE5AE900FB352E /* BCAchievementNotifierAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BCAchievementNotifierAppDelegate.m; sourceTree = "<group>"; };
+		02BA612E13BE5AEA00FB352E /* BCAchievementNotifierTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BCAchievementNotifierTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		02BA612F13BE5AEA00FB352E /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		02BA613813BE5AEA00FB352E /* BCAchievementNotifierTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BCAchievementNotifierTests-Info.plist"; sourceTree = "<group>"; };
+		02BA613A13BE5AEA00FB352E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		02BA613C13BE5AEA00FB352E /* BCAchievementNotifierTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BCAchievementNotifierTests.h; sourceTree = "<group>"; };
+		02BA613E13BE5AEA00FB352E /* BCAchievementNotifierTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BCAchievementNotifierTests.m; sourceTree = "<group>"; };
+		02BA614E13BE5B3700FB352E /* BCAchievementNotificationCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCAchievementNotificationCenter.h; sourceTree = "<group>"; };
+		02BA614F13BE5B3700FB352E /* BCAchievementNotificationCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCAchievementNotificationCenter.m; sourceTree = "<group>"; };
+		02BA615013BE5B3700FB352E /* BCAchievementNotificationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCAchievementNotificationView.h; sourceTree = "<group>"; };
+		02BA615113BE5B3700FB352E /* BCAchievementNotificationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCAchievementNotificationView.m; sourceTree = "<group>"; };
+		02BA615213BE5B3700FB352E /* BCAchievementViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCAchievementViewProtocol.h; sourceTree = "<group>"; };
+		02BA615413BE5B3700FB352E /* gk-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gk-icon.png"; sourceTree = "<group>"; };
+		02BA615513BE5B3700FB352E /* gk-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gk-icon@2x.png"; sourceTree = "<group>"; };
+		02BA615613BE5B3700FB352E /* gk-notification.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gk-notification.png"; sourceTree = "<group>"; };
+		02BA615713BE5B3700FB352E /* gk-notification@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gk-notification@2x.png"; sourceTree = "<group>"; };
+		02BA615E13BE5DBE00FB352E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		02BA616513BE601900FB352E /* TestAppViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestAppViewController.h; sourceTree = "<group>"; };
+		02BA616613BE601900FB352E /* TestAppViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestAppViewController.m; sourceTree = "<group>"; };
+		02BA616713BE601900FB352E /* TestAppViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestAppViewController_iPad.xib; sourceTree = "<group>"; };
+		02BA616F13BE618000FB352E /* TestAppViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestAppViewController_iPhone.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		02BA610613BE5AE900FB352E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02BA615F13BE5DBE00FB352E /* QuartzCore.framework in Frameworks */,
+				02BA610E13BE5AE900FB352E /* UIKit.framework in Frameworks */,
+				02BA611013BE5AE900FB352E /* Foundation.framework in Frameworks */,
+				02BA611213BE5AE900FB352E /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		02BA612A13BE5AEA00FB352E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02BA613013BE5AEA00FB352E /* SenTestingKit.framework in Frameworks */,
+				02BA613113BE5AEA00FB352E /* UIKit.framework in Frameworks */,
+				02BA613213BE5AEA00FB352E /* Foundation.framework in Frameworks */,
+				02BA613313BE5AEA00FB352E /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		02BA60FE13BE5AE900FB352E = {
+			isa = PBXGroup;
+			children = (
+				02BA614D13BE5B3700FB352E /* BCAchievementNotifier */,
+				02BA611313BE5AE900FB352E /* TestApp */,
+				02BA613613BE5AEA00FB352E /* BCAchievementNotifierTests */,
+				02BA610C13BE5AE900FB352E /* Frameworks */,
+				02BA610A13BE5AE900FB352E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		02BA610A13BE5AE900FB352E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				02BA610913BE5AE900FB352E /* BCAchievementNotifier.app */,
+				02BA612E13BE5AEA00FB352E /* BCAchievementNotifierTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		02BA610C13BE5AE900FB352E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				02BA615E13BE5DBE00FB352E /* QuartzCore.framework */,
+				02BA610D13BE5AE900FB352E /* UIKit.framework */,
+				02BA610F13BE5AE900FB352E /* Foundation.framework */,
+				02BA611113BE5AE900FB352E /* CoreGraphics.framework */,
+				02BA612F13BE5AEA00FB352E /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		02BA611313BE5AE900FB352E /* TestApp */ = {
+			isa = PBXGroup;
+			children = (
+				02BA611C13BE5AE900FB352E /* BCAchievementNotifierAppDelegate.h */,
+				02BA611D13BE5AE900FB352E /* BCAchievementNotifierAppDelegate.m */,
+				02BA616513BE601900FB352E /* TestAppViewController.h */,
+				02BA616613BE601900FB352E /* TestAppViewController.m */,
+				02BA616713BE601900FB352E /* TestAppViewController_iPad.xib */,
+				02BA616F13BE618000FB352E /* TestAppViewController_iPhone.xib */,
+				02BA611413BE5AE900FB352E /* Supporting Files */,
+			);
+			path = TestApp;
+			sourceTree = "<group>";
+		};
+		02BA611413BE5AE900FB352E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				02BA611513BE5AE900FB352E /* BCAchievementNotifier-Info.plist */,
+				02BA611613BE5AE900FB352E /* InfoPlist.strings */,
+				02BA611913BE5AE900FB352E /* main.m */,
+				02BA611B13BE5AE900FB352E /* BCAchievementNotifier-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		02BA613613BE5AEA00FB352E /* BCAchievementNotifierTests */ = {
+			isa = PBXGroup;
+			children = (
+				02BA613C13BE5AEA00FB352E /* BCAchievementNotifierTests.h */,
+				02BA613E13BE5AEA00FB352E /* BCAchievementNotifierTests.m */,
+				02BA613713BE5AEA00FB352E /* Supporting Files */,
+			);
+			path = BCAchievementNotifierTests;
+			sourceTree = "<group>";
+		};
+		02BA613713BE5AEA00FB352E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				02BA613813BE5AEA00FB352E /* BCAchievementNotifierTests-Info.plist */,
+				02BA613913BE5AEA00FB352E /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		02BA614D13BE5B3700FB352E /* BCAchievementNotifier */ = {
+			isa = PBXGroup;
+			children = (
+				02BA615213BE5B3700FB352E /* BCAchievementViewProtocol.h */,
+				02BA614E13BE5B3700FB352E /* BCAchievementNotificationCenter.h */,
+				02BA614F13BE5B3700FB352E /* BCAchievementNotificationCenter.m */,
+				02BA615013BE5B3700FB352E /* BCAchievementNotificationView.h */,
+				02BA615113BE5B3700FB352E /* BCAchievementNotificationView.m */,
+				02BA615313BE5B3700FB352E /* images */,
+			);
+			path = BCAchievementNotifier;
+			sourceTree = "<group>";
+		};
+		02BA615313BE5B3700FB352E /* images */ = {
+			isa = PBXGroup;
+			children = (
+				02BA615413BE5B3700FB352E /* gk-icon.png */,
+				02BA615513BE5B3700FB352E /* gk-icon@2x.png */,
+				02BA615613BE5B3700FB352E /* gk-notification.png */,
+				02BA615713BE5B3700FB352E /* gk-notification@2x.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		02BA610813BE5AE900FB352E /* BCAchievementNotifier */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 02BA614213BE5AEA00FB352E /* Build configuration list for PBXNativeTarget "BCAchievementNotifier" */;
+			buildPhases = (
+				02BA610513BE5AE900FB352E /* Sources */,
+				02BA610613BE5AE900FB352E /* Frameworks */,
+				02BA610713BE5AE900FB352E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BCAchievementNotifier;
+			productName = BCAchievementNotifier;
+			productReference = 02BA610913BE5AE900FB352E /* BCAchievementNotifier.app */;
+			productType = "com.apple.product-type.application";
+		};
+		02BA612D13BE5AEA00FB352E /* BCAchievementNotifierTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 02BA614513BE5AEA00FB352E /* Build configuration list for PBXNativeTarget "BCAchievementNotifierTests" */;
+			buildPhases = (
+				02BA612913BE5AEA00FB352E /* Sources */,
+				02BA612A13BE5AEA00FB352E /* Frameworks */,
+				02BA612B13BE5AEA00FB352E /* Resources */,
+				02BA612C13BE5AEA00FB352E /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				02BA613513BE5AEA00FB352E /* PBXTargetDependency */,
+			);
+			name = BCAchievementNotifierTests;
+			productName = BCAchievementNotifierTests;
+			productReference = 02BA612E13BE5AEA00FB352E /* BCAchievementNotifierTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		02BA610013BE5AE900FB352E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "Butterd Cat Software";
+			};
+			buildConfigurationList = 02BA610313BE5AE900FB352E /* Build configuration list for PBXProject "BCAchievementNotifier" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 02BA60FE13BE5AE900FB352E;
+			productRefGroup = 02BA610A13BE5AE900FB352E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				02BA610813BE5AE900FB352E /* BCAchievementNotifier */,
+				02BA612D13BE5AEA00FB352E /* BCAchievementNotifierTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		02BA610713BE5AE900FB352E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02BA611813BE5AE900FB352E /* InfoPlist.strings in Resources */,
+				02BA615A13BE5B3700FB352E /* gk-icon.png in Resources */,
+				02BA615B13BE5B3700FB352E /* gk-icon@2x.png in Resources */,
+				02BA615C13BE5B3700FB352E /* gk-notification.png in Resources */,
+				02BA615D13BE5B3700FB352E /* gk-notification@2x.png in Resources */,
+				02BA616913BE601900FB352E /* TestAppViewController_iPad.xib in Resources */,
+				02BA617013BE618000FB352E /* TestAppViewController_iPhone.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		02BA612B13BE5AEA00FB352E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02BA613B13BE5AEA00FB352E /* InfoPlist.strings in Resources */,
+				02BA613D13BE5AEA00FB352E /* BCAchievementNotifierTests.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		02BA612C13BE5AEA00FB352E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		02BA610513BE5AE900FB352E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02BA611A13BE5AE900FB352E /* main.m in Sources */,
+				02BA611E13BE5AE900FB352E /* BCAchievementNotifierAppDelegate.m in Sources */,
+				02BA615813BE5B3700FB352E /* BCAchievementNotificationCenter.m in Sources */,
+				02BA615913BE5B3700FB352E /* BCAchievementNotificationView.m in Sources */,
+				02BA616813BE601900FB352E /* TestAppViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		02BA612913BE5AEA00FB352E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02BA613F13BE5AEA00FB352E /* BCAchievementNotifierTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		02BA613513BE5AEA00FB352E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 02BA610813BE5AE900FB352E /* BCAchievementNotifier */;
+			targetProxy = 02BA613413BE5AEA00FB352E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		02BA611613BE5AE900FB352E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				02BA611713BE5AE900FB352E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		02BA613913BE5AEA00FB352E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				02BA613A13BE5AEA00FB352E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		02BA614013BE5AEA00FB352E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		02BA614113BE5AEA00FB352E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		02BA614313BE5AEA00FB352E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TestApp/BCAchievementNotifier-Prefix.pch";
+				INFOPLIST_FILE = "TestApp/BCAchievementNotifier-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		02BA614413BE5AEA00FB352E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TestApp/BCAchievementNotifier-Prefix.pch";
+				INFOPLIST_FILE = "TestApp/BCAchievementNotifier-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		02BA614613BE5AEA00FB352E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BCAchievementNotifier.app/BCAchievementNotifier";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BCAchievementNotifier/BCAchievementNotifier-Prefix.pch";
+				INFOPLIST_FILE = "BCAchievementNotifierTests/BCAchievementNotifierTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		02BA614713BE5AEA00FB352E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BCAchievementNotifier.app/BCAchievementNotifier";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BCAchievementNotifier/BCAchievementNotifier-Prefix.pch";
+				INFOPLIST_FILE = "BCAchievementNotifierTests/BCAchievementNotifierTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		02BA610313BE5AE900FB352E /* Build configuration list for PBXProject "BCAchievementNotifier" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				02BA614013BE5AEA00FB352E /* Debug */,
+				02BA614113BE5AEA00FB352E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		02BA614213BE5AEA00FB352E /* Build configuration list for PBXNativeTarget "BCAchievementNotifier" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				02BA614313BE5AEA00FB352E /* Debug */,
+				02BA614413BE5AEA00FB352E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		02BA614513BE5AEA00FB352E /* Build configuration list for PBXNativeTarget "BCAchievementNotifierTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				02BA614613BE5AEA00FB352E /* Debug */,
+				02BA614713BE5AEA00FB352E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 02BA610013BE5AE900FB352E /* Project object */;
+}

@@ -21,8 +21,10 @@
  */
 @interface BCAchievementNotificationCenter : NSObject
 {
-    UIView         *_topView;  /**< Reference to top view of UIApplication. */
-	UIView		   *_containerView;
+//    UIView         *_topView;  /**< Reference to top view of UIApplication. */
+	UIWindow	   *_containerWindow; // window used for notifications, should float above main UI
+	UIWindow		*mainWindow;		// main window used to detect interface orientation
+//	UIView		   *_containerView;
     NSMutableArray *_queue;    /**< Queue of achievement notifiers to display. */
     UIImage        *image;    /**< Logo to display in notifications. */
 	UIViewContentMode viewDisplayMode; /**< Where on screen views will show up, top, top left, top right, etc. Default UIViewContentModeTop */
@@ -31,6 +33,11 @@
 	
 	Class		   viewClass;
 }
+
+/**
+ * Application's main window, defaults to first window in application.windows
+ */
+@property (nonatomic, retain) UIWindow *mainWindow;
 
 /** Logo to display in notifications. */
 @property (nonatomic, retain) UIImage *image;
@@ -55,7 +62,7 @@
 /**
  * Returns a rect that's been properly adjusted for device orientation
  */
-+ (CGRect)containerRect;
+- (CGRect)containerRect;
 
 /**
  * Queues a manually created notificatoin view for display. Immediately displays if queue is empty
