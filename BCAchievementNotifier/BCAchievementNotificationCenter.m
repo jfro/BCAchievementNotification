@@ -10,7 +10,6 @@
 #import <QuartzCore/QuartzCore.h>
 #import "BCAchievementNotificationCenter.h"
 #import "BCAchievementNotificationView.h"
-#import <QuartzCore/QuartzCore.h>
 
 #define kBCAchievementDefaultSize   CGSizeMake(284.0f, 52.0f)
 #define kBCAchievementViewPadding 10.0f
