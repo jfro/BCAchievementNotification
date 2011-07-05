@@ -12,7 +12,7 @@
 #import "BCAchievementNotificationView.h"
 
 #define kBCAchievementDefaultSize   CGSizeMake(284.0f, 52.0f)
-#define kBCAchievementViewPadding 10.0f
+#define kBCAchievementViewPadding	20.0f
 #define kBCAchievementAnimeTime     0.4f
 #define kBCAchievementDisplayTime   2.30f
 
@@ -90,8 +90,8 @@
 			break;
 		case UIInterfaceOrientationPortraitUpsideDown: 
 			angle = 180;
-			xOffset = -[[UIScreen mainScreen] bounds].size.width;
-			yOffset = -[[UIScreen mainScreen] bounds].size.height;
+			xOffset = -[[UIScreen mainScreen] bounds].size.height;
+			yOffset = -[[UIScreen mainScreen] bounds].size.width;
 			break;
 		default: break;
 	}
@@ -256,12 +256,12 @@
 	CGRect f = _containerWindow.frame;
 	
 	// Swap the frame height and width if necessary
- 	if (UIDeviceOrientationIsLandscape(o)) {
-		CGFloat t;
-		t = f.size.width;
-		f.size.width = f.size.height;
-		f.size.height = t;
-	}
+// 	if (UIDeviceOrientationIsLandscape(o)) {
+//		CGFloat t;
+//		t = f.size.width;
+//		f.size.width = f.size.height;
+//		f.size.height = t;
+//	}
 	
 	CGAffineTransform previousTransform = _containerWindow.layer.affineTransform;
 	CGAffineTransform newTransform = CGAffineTransformMakeRotation(angle * M_PI / 180.0);
@@ -281,7 +281,11 @@
 	_containerWindow.layer.affineTransform = newTransform;
 	
 	// Fix the view origin
-	_containerWindow.frame = (CGRect){f.origin.x,f.origin.y,_containerWindow.frame.size};
+	//_containerWindow.frame = (CGRect){f.origin.x,f.origin.y,_containerWindow.frame.size};
+//	_containerWindow.frame = [self orientedFrame:f];
+//	if(!_containerWindow.hidden)
+//		_containerWindow.frame = [self endFrameForFrame:f];
+	
     [UIView commitAnimations];
 }
 
