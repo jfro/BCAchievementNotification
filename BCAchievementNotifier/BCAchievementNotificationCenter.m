@@ -39,14 +39,22 @@
 	if(!_containerWindow)
 	{
 		//[_topView addSubview:_containerView];
-		_containerWindow = [[UIWindow alloc] initWithFrame:[self startFrameForFrame:notification.frame]];
+		//_containerWindow = [[UIWindow alloc] initWithFrame:[self startFrameForFrame:notification.frame]];
+		CGRect containerFrame = [[UIScreen mainScreen] bounds];
+		UIInterfaceOrientation o = [self interfaceOrientation];
+		if(UIInterfaceOrientationIsLandscape(o))
+			containerFrame.size = CGSizeMake(containerFrame.size.height, containerFrame.size.width);
+		_containerWindow = [[UIWindow alloc] initWithFrame:containerFrame];
 		_containerWindow.windowLevel = UIWindowLevelStatusBar;
 		_containerWindow.userInteractionEnabled = NO;
+//		_containerWindow.layer.borderColor = [[UIColor redColor] CGColor];
+//		_containerWindow.layer.borderWidth = 2.0f;
 		[self setupDefaultFrame];
 	}
 	//[_topView addSubview:notification];
 //	notification.frame = [self startFrameForFrame:notification.frame];
-	_containerWindow.frame = [self startFrameForFrame:notification.frame];
+//	_containerWindow.frame = [self startFrameForFrame:notification.frame];
+	notification.frame = [self startFrameForFrame:notification.frame];
 	[_containerWindow addSubview:notification];
 	_containerWindow.hidden = NO;
 //	_containerWindow.frame = CGRectMake(50, 50, 100, 100);
@@ -54,12 +62,14 @@
 	// TODO: i think handler should handle animations, don't think it's the view's job to
 	[UIView animateWithDuration:kBCAchievementAnimeTime delay:0.0 options:0 
 					 animations:^{
-						 _containerWindow.frame = [self endFrameForFrame:notification.frame];
+//						 _containerWindow.frame = [self endFrameForFrame:notification.frame];
+						 notification.frame = [self endFrameForFrame:notification.frame];
 					 } 
 					 completion:^(BOOL finished) {
 						 [UIView animateWithDuration:kBCAchievementAnimeTime delay:kBCAchievementDisplayTime options:0 
 										  animations:^{
-											  _containerWindow.frame = [self startFrameForFrame:notification.frame];
+//											  _containerWindow.frame = [self startFrameForFrame:notification.frame];
+											  notification.frame = [self startFrameForFrame:notification.frame];
 										  } 
 										  completion:^(BOOL finished) {
 											  [_queue removeObjectAtIndex:0];
@@ -193,8 +203,8 @@
 		default:
 			break;
 	}
-	NSLog(@"Rotating start frame");
-	result = [self orientedFrame:result];
+//	NSLog(@"Rotating start frame");
+//	result = [self orientedFrame:result];
 	return result;
 }
 
@@ -234,14 +244,13 @@
 		default:
 			break;
 	}
-	NSLog(@"Rotating end frame");
-	result = [self orientedFrame:result];
+//	NSLog(@"Rotating end frame");
+//	result = [self orientedFrame:result];
 	return result;
 }
 
 - (void)orientationChanged:(NSNotification *)notification
 {
-	//[self showTitle];
 	NSLog(@"Orientation changed");
 //	UIInterfaceOrientation o = [[UIApplication sharedApplication] statusBarOrientation];
 	UIInterfaceOrientation o = [self interfaceOrientation];
@@ -257,12 +266,12 @@
 	CGRect f = _containerWindow.frame;
 	
 	// Swap the frame height and width if necessary
-// 	if (UIDeviceOrientationIsLandscape(o)) {
-//		CGFloat t;
-//		t = f.size.width;
-//		f.size.width = f.size.height;
-//		f.size.height = t;
-//	}
+ 	if (UIDeviceOrientationIsLandscape(o)) {
+		CGFloat t;
+		t = f.size.width;
+		f.size.width = f.size.height;
+		f.size.height = t;
+	}
 	
 	CGAffineTransform previousTransform = _containerWindow.layer.affineTransform;
 	CGAffineTransform newTransform = CGAffineTransformMakeRotation(angle * M_PI / 180.0);
@@ -282,7 +291,7 @@
 	_containerWindow.layer.affineTransform = newTransform;
 	
 	// Fix the view origin
-	//_containerWindow.frame = (CGRect){f.origin.x,f.origin.y,_containerWindow.frame.size};
+	_containerWindow.frame = (CGRect){f.origin.x,f.origin.y,_containerWindow.frame.size};
 //	_containerWindow.frame = [self orientedFrame:f];
 //	if(!_containerWindow.hidden)
 //		_containerWindow.frame = [self endFrameForFrame:f];

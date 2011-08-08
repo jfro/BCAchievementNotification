@@ -246,6 +246,7 @@
 		02BA610013BE5AE900FB352E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastUpgradeCheck = 0420;
 				ORGANIZATIONNAME = "Butterd Cat Software";
 			};
 			buildConfigurationList = 02BA610313BE5AE900FB352E /* Build configuration list for PBXProject "BCAchievementNotifier" */;
