@@ -46,8 +46,6 @@
 		_containerWindow = [[UIWindow alloc] initWithFrame:containerFrame];
 		_containerWindow.windowLevel = UIWindowLevelStatusBar;
 		_containerWindow.userInteractionEnabled = NO;
-		_containerWindow.layer.borderColor = [[UIColor redColor] CGColor];
-		_containerWindow.layer.borderWidth = 2.0f;
 		[self setupDefaultFrame];
 	}
 	
