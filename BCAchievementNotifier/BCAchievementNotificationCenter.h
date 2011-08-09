@@ -32,6 +32,9 @@
 	UIImage		   *defaultBackgroundImage;
 	
 	Class		   viewClass;
+	NSTimer		   *delayTimer;
+	BOOL		   animating;
+	UIView<BCAchievementViewProtocol> *currentNotification;
 }
 
 /**
