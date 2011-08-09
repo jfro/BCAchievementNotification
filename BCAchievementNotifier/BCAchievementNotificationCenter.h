@@ -21,20 +21,19 @@
  */
 @interface BCAchievementNotificationCenter : NSObject
 {
-//    UIView         *_topView;  /**< Reference to top view of UIApplication. */
-	UIWindow	   *_containerWindow; // window used for notifications, should float above main UI
-	UIWindow		*mainWindow;		// main window used to detect interface orientation
-//	UIView		   *_containerView;
-    NSMutableArray *_queue;    /**< Queue of achievement notifiers to display. */
-    UIImage        *image;    /**< Logo to display in notifications. */
-	UIViewContentMode viewDisplayMode; /**< Where on screen views will show up, top, top left, top right, etc. Default UIViewContentModeTop */
-	CGSize		   defaultViewSize;
-	UIImage		   *defaultBackgroundImage;
+	UIWindow							*_containerWindow;	// window used for notifications, should float above main UI
+	UIWindow							*mainWindow;		// main window used to detect interface orientation
+    NSMutableArray						*_queue;			// Queue of achievement notifiers to display.
+    UIImage								*image;				// Logo to display in notifications.
+	UIViewContentMode					viewDisplayMode;	// Where on screen views will show up, top, top left, top right, etc. Default UIViewContentModeTop
+	CGSize								defaultViewSize;
+	UIImage								*defaultBackgroundImage;
 	
-	Class		   viewClass;
-	NSTimer		   *delayTimer;
-	BOOL		   animating;
-	UIView<BCAchievementViewProtocol> *currentNotification;
+	Class								viewClass;
+	NSTimer								*delayTimer;
+	BOOL								animating;
+	UIInterfaceOrientation				currentOrientation;
+	UIView<BCAchievementViewProtocol>	*currentNotification;
 }
 
 /**
@@ -42,13 +41,20 @@
  */
 @property (nonatomic, retain) UIWindow *mainWindow;
 
-/** Logo to display in notifications. */
+/** 
+ * Logo to display in notifications. 
+ */
 @property (nonatomic, retain) UIImage *image;
+/**
+ * Default background image, apple gamecenter style by default
+ */
 @property (nonatomic, retain) UIImage *defaultBackgroundImage;
+
 /**
  * View content mode value to control where the views will show on the screen, defaults to top 
  */
 @property (nonatomic, assign) UIViewContentMode viewDisplayMode;
+
 /**
  * Default size for handler created views
  */

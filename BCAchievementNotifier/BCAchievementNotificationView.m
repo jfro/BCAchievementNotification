@@ -8,19 +8,14 @@
 
 #import <GameKit/GameKit.h>
 #import "BCAchievementNotificationView.h"
-//#import "BCAchievementNotificationCenter.h"
 
 @implementation BCAchievementNotificationView
 
 @synthesize achievementDescription;
 @synthesize backgroundView;
-//@synthesize handlerDelegate;
 @synthesize detailLabel;
 @synthesize iconView;
-//@synthesize message;
-//@synthesize title;
 @synthesize textLabel;
-//@synthesize displayMode;
 
 #pragma mark -
 
@@ -28,7 +23,6 @@
 {
 	if ((self = [self initWithFrame:aFrame]))
 	{
-		// setter defined below to populate subviews with info
 		self.achievementDescription = anAchievement;
 	}
 	return self;
@@ -48,10 +42,7 @@
 {
     if ((self = [super initWithFrame:aFrame]))
     {
-//		self.displayMode = UIViewContentModeTop;
-		
         // create the GK background
-        //UIImage *backgroundStretch = [[UIImage imageNamed:@"gk-notification.png"] stretchableImageWithLeftCapWidth:8.0f topCapHeight:0.0f];
         UIImageView *tBackground = [[UIImageView alloc] initWithFrame:aFrame];
         tBackground.autoresizingMask = UIViewAutoresizingFlexibleWidth;
         //tBackground.image = backgroundStretch;
@@ -92,9 +83,7 @@
     [backgroundView release];
     [detailLabel release];
     [iconView release];
-//    [message release];
     [textLabel release];
-//    [title release];
     
     [super dealloc];
 }

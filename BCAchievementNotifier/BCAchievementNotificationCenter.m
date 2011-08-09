@@ -228,6 +228,13 @@
 - (void)orientationChanged:(NSNotification *)notification
 {
 	UIInterfaceOrientation o = [self interfaceOrientation];
+	
+	// prevent calling orientation animation code excessively
+	if(o == currentOrientation) {
+		return;
+	}
+	currentOrientation = o;
+	
 	CGFloat angle = 0;
 	switch (o) {
 		case UIInterfaceOrientationLandscapeLeft: angle = -90; break;
@@ -279,13 +286,14 @@
 	if([mainWindow rootViewController]) {
 		return [[mainWindow rootViewController] interfaceOrientation];
 	}
+	NSLog(@"Falling back on status bar");
 	return [[UIApplication sharedApplication] statusBarOrientation];
 }
 
 - (void)setupDefaultFrame
 {
-//	UIInterfaceOrientation o = [[UIApplication sharedApplication] statusBarOrientation];
 	UIInterfaceOrientation o = [self interfaceOrientation];
+	
 	CGFloat angle = 0;
 	switch (o) {
 		case UIInterfaceOrientationLandscapeLeft: angle = -90; break;
@@ -293,9 +301,7 @@
 		case UIInterfaceOrientationPortraitUpsideDown: angle = 180; break;
 		default: break;
 	}
-	NSLog(@"Rotating %f", angle);
 	
-	//	CGRect f = [[UIScreen mainScreen] applicationFrame];
 	CGRect f = _containerWindow.frame;
 	
 	// Swap the frame height and width if necessary
@@ -308,7 +314,6 @@
 	
 	CGAffineTransform previousTransform = _containerWindow.layer.affineTransform;
 	CGAffineTransform newTransform = CGAffineTransformMakeRotation(angle * M_PI / 180.0);
-	//newTransform = CGAffineTransformConcat(newTransform, CGAffineTransformMakeTranslation(f.size.height, 0));
 	
 	// Reset the transform so we can set the size
 	_containerWindow.layer.affineTransform = CGAffineTransformIdentity;
@@ -316,9 +321,6 @@
 	
 	// Revert to the previous transform for correct animation
 	_containerWindow.layer.affineTransform = previousTransform;
-	
-//	[UIView beginAnimations:nil context:NULL];
-//	[UIView setAnimationDuration:0.3];
 	
 	// Set the new transform
 	_containerWindow.layer.affineTransform = newTransform;
@@ -365,6 +367,7 @@
 		self.viewDisplayMode = UIViewContentModeTop;
 		self.defaultViewSize = kBCAchievementDefaultSize;
 		self.viewClass = [BCAchievementNotificationView class];
+		currentOrientation = [self interfaceOrientation];
 		
 		[self setupDefaultFrame];
 		
