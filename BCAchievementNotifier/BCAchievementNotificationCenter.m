@@ -286,7 +286,6 @@
 	if([mainWindow rootViewController]) {
 		return [[mainWindow rootViewController] interfaceOrientation];
 	}
-	NSLog(@"Falling back on status bar");
 	return [[UIApplication sharedApplication] statusBarOrientation];
 }
 
