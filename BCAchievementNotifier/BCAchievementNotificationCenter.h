@@ -34,6 +34,9 @@
 	BOOL								animating;
 	UIInterfaceOrientation				currentOrientation;
 	UIView<BCAchievementViewProtocol>	*currentNotification;
+    
+    NSTimeInterval                      groupingWindow;
+    NSTimer                             *groupTimer;
 }
 
 /**
@@ -61,6 +64,15 @@
 @property (nonatomic, assign) CGSize defaultViewSize;
 
 @property (nonatomic, assign) Class viewClass;
+
+
+/**
+ * Allows for grouping of notifications Xbox-style. If multiple notifications are
+ * queued within the window timespan, only one notification will be posted,
+ * reading "X achievements unlocked". Alert display will be delayed by this window time.
+ * If the window is 0, then there will be no grouping. The default is 0.
+ */
+@property (nonatomic, assign) NSTimeInterval groupingWindow;
 
 /**
  * Returns a reference to the singleton BCAchievementHandler.

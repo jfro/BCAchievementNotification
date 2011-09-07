@@ -29,6 +29,7 @@
 - (CGRect)endFrameForFrame:(CGRect)aFrame;
 - (UIInterfaceOrientation)interfaceOrientation;
 - (void)setupDefaultFrame;
+- (void) displayGroupedNotifications;
 @end
 
 #pragma mark -
@@ -339,6 +340,7 @@
 @synthesize viewDisplayMode;
 @synthesize defaultViewSize;
 @synthesize viewClass;
+@synthesize groupingWindow;
 
 #pragma mark -
 
@@ -367,6 +369,8 @@
 		currentOrientation = [self interfaceOrientation];
 		
 		[self setupDefaultFrame];
+        
+        groupingWindow = 0;
 		
         _queue = [[NSMutableArray alloc] initWithCapacity:0];
         self.image = [UIImage imageNamed:@"gk-icon.png"];
@@ -385,6 +389,11 @@
 	[delayTimer invalidate];
 	[delayTimer release];
 	delayTimer = nil;
+    
+    [groupTimer invalidate];
+    [groupTimer release];
+    groupTimer = nil;
+    
 	[_containerWindow release];
     [_queue release];
     [image release];
@@ -414,8 +423,53 @@
 - (void)queueNotification:(BCAchievementNotificationView *)notification
 {
 	[_queue addObject:notification];
-	if([_queue count] == 1)
-		[self displayNotification:notification];
+    
+    if (groupTimer == nil && groupingWindow > 0)
+    {
+        groupTimer = [[NSTimer scheduledTimerWithTimeInterval:groupingWindow
+                                                      target:self
+                                                    selector:@selector(displayGroupedNotifications)
+                                                     userInfo:nil repeats:NO] retain];
+        
+        return;
+    }
+    
+    
+    if (groupTimer == nil && [_queue count] == 1)
+    {
+        [self displayNotification:notification];
+    }
+}
+
+- (void) displayGroupedNotifications
+{
+    [groupTimer invalidate];
+    [groupTimer release];
+    groupTimer = nil;
+    
+    // flush the queue if there are more than one notification in there
+    if ([_queue count] == 1)
+    {
+        [self displayNotification:[_queue objectAtIndex:0]];
+        return;
+    }
+    
+    
+    NSString *achMessage = [NSString stringWithFormat:@"%d ACHIEVEMENTS UNLOCKED", [_queue count]];
+    CGRect frame = CGRectMake(0, 0, self.defaultViewSize.width, self.defaultViewSize.height);
+    UIView<BCAchievementViewProtocol> *notification = [[[viewClass alloc] initWithFrame:frame title:nil
+                                                                                message:achMessage] autorelease];
+	((UIImageView *)[notification backgroundView]).image = self.defaultBackgroundImage;
+	if(self.image)
+        [notification setImage:self.image];
+    else
+        [notification setImage:nil];
+    
+    // flush the existing queue, then add this one in
+    [_queue removeAllObjects];
+    [_queue addObject:notification];
+    
+    [self displayNotification:notification];
 }
 
 - (void)notifyWithAchievementDescription:(GKAchievementDescription *)achievement
