@@ -12,7 +12,7 @@
 #import "BCAchievementNotificationView.h"
 
 #define kBCAchievementDefaultSize   CGSizeMake(284.0f, 52.0f)
-#define kBCAchievementViewPadding	20.0f
+#define kBCAchievementViewPadding	10.0f
 #define kBCAchievementAnimeTime     0.4f
 #define kBCAchievementDisplayTime   2.30f
 
