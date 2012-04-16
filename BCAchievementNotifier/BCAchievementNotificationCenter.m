@@ -82,9 +82,17 @@
 						 animating = NO;
 						 [currentNotification removeFromSuperview];
 						 currentNotification = nil;
-						 [_queue removeObjectAtIndex:0];
-						 if ([_queue count])
-						 {
+                         
+                         if ([_queue count] > 0)
+                         {
+                             // remove the last object shown
+                             [_queue removeObjectAtIndex:0];
+                         }
+                         
+                         // now display the next one in the list (if there is one)
+						 if ([_queue count] > 0)
+						 {                             
+                             
 							 [self displayNotification:(UIView<BCAchievementViewProtocol> *)[_queue objectAtIndex:0]];
 						 }
 						 else
