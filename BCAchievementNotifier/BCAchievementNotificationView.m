@@ -21,19 +21,19 @@
 
 - (id)initWithFrame:(CGRect)aFrame achievementDescription:(GKAchievementDescription *)anAchievement
 {
-	if ((self = [self initWithFrame:aFrame]))
-	{
-		self.achievementDescription = anAchievement;
-	}
-	return self;
+    if ((self = [self initWithFrame:aFrame]))
+    {
+        self.achievementDescription = anAchievement;
+    }
+    return self;
 }
 
 - (id)initWithFrame:(CGRect)aFrame title:(NSString *)aTitle message:(NSString *)aMessage
 {
     if ((self = [self initWithFrame:aFrame]))
     {
-		self.textLabel.text = aTitle;
-		self.detailLabel.text = aMessage;
+        self.textLabel.text = aTitle;
+        self.detailLabel.text = aMessage;
     }
     return self;
 }
@@ -55,7 +55,7 @@
         CGRect r2 = kBCAchievementText2;
 
         // create the text label
-		textLabel = [[UILabel alloc] initWithFrame:r1];
+        textLabel = [[UILabel alloc] initWithFrame:r1];
         textLabel.textAlignment = UITextAlignmentCenter;
         textLabel.backgroundColor = [UIColor clearColor];
         textLabel.textColor = [UIColor whiteColor];
@@ -90,16 +90,16 @@
 
 - (void)setAchievementDescription:(GKAchievementDescription *)description
 {
-	[description retain];
-	[achievementDescription release];
-	achievementDescription = description;
-	
-	self.textLabel.text = self.achievementDescription.title;
-	self.detailLabel.text = self.achievementDescription.achievedDescription;
-	if(self.achievementDescription.image)
-	{
-		[self setImage:self.achievementDescription.image];
-	}
+    [description retain];
+    [achievementDescription release];
+    achievementDescription = description;
+    
+    self.textLabel.text = self.achievementDescription.title;
+    self.detailLabel.text = self.achievementDescription.achievedDescription;
+    if(self.achievementDescription.image)
+    {
+        [self setImage:self.achievementDescription.image];
+    }
 }
 
 #pragma mark -

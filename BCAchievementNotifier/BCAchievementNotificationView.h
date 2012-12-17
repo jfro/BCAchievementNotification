@@ -30,13 +30,13 @@
 {
     GKAchievementDescription  *achievementDescription;  // Description of achievement earned.
 
-    UIView  *backgroundView;		// Stretchable background view.
-    UIImageView  *iconView;			// Logo that is displayed on the left.
+    UIView  *backgroundView;        // Stretchable background view.
+    UIImageView  *iconView;         // Logo that is displayed on the left.
 
-    UILabel      *textLabel;		// Text label used to display achievement title.
-    UILabel      *detailLabel;		// Text label used to display achievement description.
-	
-	UIViewContentMode displayMode;	// where to display the view: corners, top, or bottom. default: top
+    UILabel      *textLabel;        // Text label used to display achievement title.
+    UILabel      *detailLabel;      // Text label used to display achievement description.
+    
+    UIViewContentMode displayMode;  // where to display the view: corners, top, or bottom. default: top
 }
 
 /** Description of achievement earned. setting this will automatically set approrpiate UI with title, description and image. */

@@ -21,19 +21,19 @@
  */
 @interface BCAchievementNotificationCenter : NSObject
 {
-	UIWindow							*_containerWindow;	// window used for notifications, should float above main UI
-	UIWindow							*mainWindow;		// main window used to detect interface orientation
-    NSMutableArray						*_queue;			// Queue of achievement notifiers to display.
-    UIImage								*image;				// Logo to display in notifications.
-	UIViewContentMode					viewDisplayMode;	// Where on screen views will show up, top, top left, top right, etc. Default UIViewContentModeTop
-	CGSize								defaultViewSize;
-	UIImage								*defaultBackgroundImage;
-	
-	Class								viewClass;
-	NSTimer								*delayTimer;
-	BOOL								animating;
-	UIInterfaceOrientation				currentOrientation;
-	UIView<BCAchievementViewProtocol>	*currentNotification;
+    UIWindow                            *_containerWindow;    // window used for notifications, should float above main UI
+    UIWindow                            *mainWindow;        // main window used to detect interface orientation
+    NSMutableArray                      *_queue;            // Queue of achievement notifiers to display.
+    UIImage                             *image;                // Logo to display in notifications.
+    UIViewContentMode                   viewDisplayMode;    // Where on screen views will show up, top, top left, top right, etc. Default UIViewContentModeTop
+    CGSize                              defaultViewSize;
+    UIImage                             *defaultBackgroundImage;
+    
+    Class                               viewClass;
+    NSTimer                             *delayTimer;
+    BOOL                                animating;
+    UIInterfaceOrientation              currentOrientation;
+    UIView<BCAchievementViewProtocol>   *currentNotification;
     
     NSTimeInterval                      groupingWindow;
     NSTimer                             *groupTimer;
